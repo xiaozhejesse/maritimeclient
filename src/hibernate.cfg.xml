@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost/xxxxx</property> 
+        <property name="connection.username">xxxxx</property>
+        <property name="connection.password">xxxxx</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <!-- <property name="connection.pool_size">1</property> -->
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">false</property>
+        
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+        <!-- c3p0 configuration -->
+<!--         <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property> -->
+<!--         <property name="hibernate.c3p0.min_size">7</property> -->
+<!--         <property name="hibernate.c3p0.max_size">53</property> -->
+<!--         <property name="hibernate.c3p0.timeout">100</property> -->
+<!--         <property name="hibernate.c3p0.max_statements">50</property> -->
+<!--         <property name="hibernate.c3p0.idle_test_period">1000</property> -->
+<!--         <property name="hibernate.c3p0.validate">true</property> -->
+<!--         <property name="hibernate.connection.provider_class">org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider</property> -->
+    
+    </session-factory> 
+
+</hibernate-configuration>
